@@ -1,6 +1,6 @@
 author: lvgo
 title: Star Dust 星尘
-description: 专注并发编程、网络编程、大数据方向相关内容研究。
+description: 专注 Java 技术、并发编程、网络编程、大数据方向相关内容研究。
 keyword: lvgo star dust
 favicon: ../images/L.png
 
@@ -40,11 +40,8 @@ gitalk:
   repo: gitalk
   owner: lvgocc
   adminUser: "['lvgocc']"
-  ID: location.pathname
-  perPage: 15
   pagerDirection: last
-  createIssueManually: true
-  distractionFreeMode: false #是否启用快捷键(cmd|ctrl + enter) 提交评论.
+  distractionFreeMode: true
 
 # gitment config
 gitment_owner: yanm1ng

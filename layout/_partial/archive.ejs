@@ -5,7 +5,7 @@
     <% posts.sort((l, r) => r.date - l.date) %>
     <% posts.forEach(post => { %>
       <li class="section-list-item">
-        <span><%-date(post.date, "MM-DD")%> </span><a href="<%= url_for(post.path) %>" class="archive-title"><%= post.title %></a>
+        <span><%-date(post.date, "MM-DD")%></span><a href="<%= url_for(post.path) %>" class="archive-title"><%= post.title %></a>
         <!--<p class="archive-date"></p>-->
       </li>
     <% }) %>

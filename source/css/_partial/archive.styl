@@ -15,13 +15,16 @@
       font-size 12px
       width 47%
       float left
+      @media m-pad
+        width 100%
+        clear both
 
       .archive-title
-        color: color-primary
-        transition: all .3s ease
+        margin-left 10px
+        color: color-lack
+        transition: padding-left .3s ease
         font-size: 1.1em
 
         &:hover
-          color: color-primary
+          color: color-red
           padding-left: 10px
-          padding-right 0
