@@ -1,14 +1,12 @@
-<section class="time-section">
   <h1 class="section-year">
     <%= year %>
   </h1>
-  <div class="section-list">
+  <ul class="section-list">
     <% posts.sort((l, r) => r.date - l.date) %>
     <% posts.forEach(post => { %>
-      <div class="section-list-item">
-        <a href="<%= url_for(post.path) %>" class="archive-title"><%= post.title %></a>
-        <p class="archive-date"><%-date(post.date, "MM-DD")%></p>
-      </div>
+      <li class="section-list-item">
+        <span><%-date(post.date, "MM-DD")%> </span><a href="<%= url_for(post.path) %>" class="archive-title"><%= post.title %></a>
+        <!--<p class="archive-date"></p>-->
+      </li>
     <% }) %>
-  </div>
-</section>
+  </ul>

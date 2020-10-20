@@ -16,6 +16,7 @@
   <% for (let year of Object.keys(years).reverse()) { %>
     <%- partial('_partial/archive', { year: year, posts: years[year].reverse() }) %>
   <% } %>
+  <div style="clear: both"></div>
 </main>
 
 <script>
