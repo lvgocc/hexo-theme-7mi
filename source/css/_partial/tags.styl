@@ -22,6 +22,7 @@
     background-color: rgba(0, 133, 161, 0.8)
 
 .tag-list
+  clear both
   margin-left: 1em
   margin-right: 1em
 
@@ -38,8 +39,18 @@
     font-weight: 700
     
 .tag-preview
-  font-size: 1.1em
+  font-size: 1.0em
   padding-left: 1em
+  width 48%
+  float left
+  @media m-pad
+   width 100%
+   float none
   li
     cursor: pointer
     margin: 10px 0
+    a
+      &:hover
+        color: color-red
+  &:hover
+    color: color-red

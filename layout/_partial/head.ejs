@@ -15,16 +15,16 @@
       <%= config.title %>
     <% } %>
   </title>
-  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
-  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/<%= theme.highlight %>.min.css" rel="stylesheet">
+  <link href='<%= theme.cdn.css.fontawesome%>' rel="stylesheet">
+  <link href='<%= theme.cdn.css.nprogress%>' rel="stylesheet">
+  <link href="//lib.baomitu.com/highlight.js/9.15.10/styles/<%= theme.highlight %>.min.css" rel="stylesheet">
   <%- css('css/style') %>
   <% if (theme.comment === 'gitment') { %>
     <%- css('css/plugins/gitment.css') %>
   <% } %>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src='<%= theme.cdn.js.jquery%>'></script>
+  <script src='<%= theme.cdn.js.geopattern%>'></script>
+  <script src='<%= theme.cdn.js.nprogress%>'></script>
   <% if (theme.qrcode) { %>
     <%- js('js/qrious') %>
   <% } %>
@@ -32,9 +32,16 @@
     <%- js('js/gitment') %>
   <% } %>
   <% if (theme.comment === 'gitalk') { %>
-    <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
-    <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <link rel="stylesheet" href='<%= theme.cdn.css.gitalk%>'>
+    <script src='<%= theme.cdn.js.gitalk%>'></script>
   <% } %>
+
+  <% if (theme.FancyBox.enable) { %>
+    <link crossorigin="anonymous" integrity="sha384-Q8BgkilbsFGYNNiDqJm69hvDS7NCJWOodvfK/cwTyQD4VQA0qKzuPpvqNER1UC0F" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
+    <script crossorigin="anonymous" integrity="sha384-Zm+UU4tdcfAm29vg+MTbfu//q5B/lInMbMCr4T8c9rQFyOv6PlfQYpB5wItcXWe7" src="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <% } %>
+
+
   <%- partial('_third-party/mathjax') %>
   <%- partial('_third-party/google_analytics') %>
 </head>

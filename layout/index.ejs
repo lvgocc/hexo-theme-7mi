@@ -34,8 +34,8 @@
 </main>
 <script>
     (function () {
-        var url = '<%= config.url %>/<%= page.path %>'
-        $('#article-banner').geopattern(url)
+        <!--var url = '<%= config.url %>/<%= page.path %>'-->
+        $('#article-banner').geopattern('lvgo' + Math.random())
         $('.header').removeClass('fixed-header')
     })();
 </script>
