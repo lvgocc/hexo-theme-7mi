@@ -38,8 +38,8 @@ gitalk:
   ClientID: c85c431dec5b3fa75527
   ClientSecret: f5f4199617efe01a998333307bb1008a09b4a2d7
   repo: gitalk
-  owner: lvgo
-  adminUser: "['lvgo']"
+  owner: lvgocc
+  adminUser: "['lvgocc']"
   ID: location.pathname
   perPage: 15
   pagerDirection: last

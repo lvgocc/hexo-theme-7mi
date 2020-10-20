@@ -1,3 +1,4 @@
+
 (function ($) {
   console.log('© Theme-Vexo | https://github.com/yanm1ng/hexo-theme-vexo')
   var app = $('.app-body')
@@ -102,4 +103,10 @@
       catalog.removeClass('fixed-toc')
     }
   })
+
+  function gitalkMd5(path){
+    const str = this.url_for(path);
+    return crypto.createHash('md5').update(str).digest('hex');
+  }
+
 })(jQuery)

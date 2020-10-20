@@ -6,6 +6,7 @@
         repo: '<%=theme.gitalk.repo%>',
         owner: '<%=theme.gitalk.owner%>',
         admin: '<%=theme.gitalk.adminUser%>',
+        id: '<%= gitalk_md5(page.path)%>',
         perPage: '<%=theme.gitalk.perPage%>',
         pagerDirection: '<%=theme.gitalk.pagerDirection%>',
         createIssueManually: '<%=theme.gitalk.createIssueManually%>',
