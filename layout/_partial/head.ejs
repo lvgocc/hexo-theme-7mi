@@ -31,6 +31,10 @@
   <% if (theme.comment === 'gitment') { %>
     <%- js('js/gitment') %>
   <% } %>
+  <% if (theme.comment === 'gitalk') { %>
+    <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+    <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <% } %>
   <%- partial('_third-party/mathjax') %>
   <%- partial('_third-party/google_analytics') %>
 </head>

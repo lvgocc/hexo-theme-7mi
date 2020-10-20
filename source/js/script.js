@@ -11,7 +11,7 @@
   $(document).ready(function () {
     NProgress.start()
     $('#nprogress .bar').css({
-      'background': '#42b983'
+      'background': '#3f79e5'
     })
     $('#nprogress .spinner').hide()
 
@@ -66,7 +66,9 @@
   $('.toc-nav a').on('click', function (e) {
     e.preventDefault()
     var catalogTarget = e.currentTarget
-    var scrollTarget = $(catalogTarget.getAttribute('href'))
+    // 解决跳转中文问题
+    var targetHref = catalogTarget.getAttribute('href');
+    var scrollTarget = $(decodeURI(targetHref))
     var top = scrollTarget.offset().top
     if (top > 0) {
       $('html,body').animate({

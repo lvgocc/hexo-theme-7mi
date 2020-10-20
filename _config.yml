@@ -1,16 +1,18 @@
 author: lvgo
+title: Star Dust 星尘
 description: 专注并发编程、网络编程、大数据方向相关内容研究。
 keyword: lvgo star dust
-favicon: 
+favicon: ../images/L.png
 
+language: zh-CN
 #excerpt_link: Read more
 
 menu:
- Home: /
- Tags: /tags/
- Archives: /archives/
- Projects: /project/
- About: /about/
+  首页: /
+  标签: /tags/
+  归档: /archives/
+  开源项目: /project/
+# About: /about/
 
 # highlight
 highlight:
@@ -26,9 +28,23 @@ catalog: true
 qrcode: true
 
 # comment
-# you can set gitment, uyan or disqus
+# you can set gitment, uyan or disqus gitalk
 
-comment:
+comment: gitalk
+
+
+# gitalk config
+gitalk:
+  ClientID: c85c431dec5b3fa75527
+  ClientSecret: f5f4199617efe01a998333307bb1008a09b4a2d7
+  repo: gitalk
+  owner: lvgo
+  adminUser: "['lvgo']"
+  ID: location.pathname
+  perPage: 15
+  pagerDirection: last
+  createIssueManually: true
+  distractionFreeMode: false #是否启用快捷键(cmd|ctrl + enter) 提交评论.
 
 # gitment config
 gitment_owner: yanm1ng
@@ -41,14 +57,14 @@ gitment_oauth_secret: 4a9d2b148e7971c2201ad12131ce8bf8159ccd2e
 baidu_id: code-jxb3G2xK9c
 google_analytics: sV9GoccAvPsX-CXyXEeaUzDEvk4d77Ca-eoFKT5-2RM
 # disqus config
-disqus_shortname: 
+disqus_shortname:
 
-about: 
-  banner: http://file.muyutech.com/about.jpg
-  avatar: https://avatars3.githubusercontent.com/u/16443628?v=3&s=460
+about:
+  banner: ../images/rmch2.jpg
+  avatar: ../images/L.png
   description: "The end is always near."
-#  weibo_username:
-#  twitter_username:
+  #  weibo_username:
+  #  twitter_username:
   github_username: lvgocc
 #  zhihu_username:
 #  douban_username:

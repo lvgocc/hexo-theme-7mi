@@ -14,7 +14,7 @@
       <% tag.posts.map(function(post) { %>
         <ul class="tag-preview">
           <li>
-            <a href="<%- config.root %><%- post.path %>"><%- post.title || "Untitled" %></a>
+            <a href="<%- url_for(post.path) %>"><%- post.title || "Untitled" %></a>
           </li>
         </ul>
         <% }) %>
@@ -30,9 +30,9 @@
 
     var tag = location.hash.replace('#', '')
     if (tag) {
-      var tagId = "#tag-" + tag;
+      var tagId = "#tag-" + decodeURI(tag);
       $("html, body").animate({
-        scrollTop: $(tagId).offset().top 
+        scrollTop: $(tagId).offset().top - 40
       }, 400)
     }
   })();
