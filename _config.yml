@@ -40,7 +40,7 @@ gitalk:
   ClientSecret: f5f4199617efe01a998333307bb1008a09b4a2d7
   repo: gitalk
   owner: lvgocc
-  adminUser: "['lvgocc']"
+  adminUser: lvgocc
   pagerDirection: last
   distractionFreeMode: true
 
