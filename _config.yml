@@ -25,8 +25,8 @@ catalog: true
 # 要饭模式
 #donate: true
 
-# qrcode
-qrcode: true
+# share qrcode
+#qrcode: true
 
 # comment
 # you can set gitment, uyan or disqus gitalk

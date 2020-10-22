@@ -1,6 +1,10 @@
 <div id="article-banner">
   <h2><%- page.title %></h2>
-  <p class="post-date"><%- date(page.date, "YYYY-MM-DD") %></p>
+  <p class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i>　<%- date(page.date, "YYYY-MM-DD") %></p>
+  <!-- Tags START -->
+  <% if (page.tags && page.tags.length) { %>
+      <%- partial('_partial/tag', { tags: page.tags }) %>
+  <% } %>
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -9,6 +13,12 @@
   <!-- Article START -->
   <article class="post-article">
     <section class="markdown-content"><%- page.content %></section>
+    <div id="gzh_qrcode" class="nav-container" align="center">
+      <h3>亦或繁星、亦或尘埃。星尘✨，为了梦想，学习技术，不要抱怨、坚持下去💪。</h3>
+      <p>欢迎关注<b style='color:blue'>星尘的一个朋友</b>一起交流学习🤓。</p>
+      <img alt="星尘的一个朋友" src="https://i.loli.net/2020/10/22/7swJfMCPrThebVI.png">
+      <p class="small-info">扫码关注公众号，回复<span style="color:red">“加群”</span>一起交流学习</p>
+    </div>
     <!-- Tags START -->
     <% if (page.tags && page.tags.length) { %>
       <div class="tags">
@@ -16,6 +26,7 @@
         <%- partial('_partial/tag', { tags: page.tags }) %>
       </div>
     <% } %>
+
     <!-- Tags END -->
     <!-- NAV START -->
     <%- partial('_partial/nav') %>
