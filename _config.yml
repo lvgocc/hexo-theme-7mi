@@ -42,7 +42,7 @@ gitalk:
   owner: lvgocc
   adminUser: lvgocc
   pagerDirection: last
-  distractionFreeMode: true
+  distractionFreeMode: false
 
 # gitment config
 gitment_owner:
